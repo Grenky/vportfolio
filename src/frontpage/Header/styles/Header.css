@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul a {
+  margin-right: 50px;
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+header nav ul a:hover {
+  color: rgb(92, 85, 85);
+  transition: 0.2s;
+}/*# sourceMappingURL=Header.css.map */

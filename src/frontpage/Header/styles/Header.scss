@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    nav {
+
+        ul {
+            display: flex;
+            
+            a {
+                margin-right: 50px;
+                list-style: none;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    color: rgb(92, 85, 85);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}

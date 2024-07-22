@@ -1,0 +1,11 @@
+.slick-slider {
+  margin-bottom: 200px;
+}
+.slick-slider img {
+  width: 100%;
+  height: 100vh;
+}
+.slick-slider .slick-arrow {
+  right: 0px;
+  display: none !important;
+}/*# sourceMappingURL=SlickSlider.css.map */

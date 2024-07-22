@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+h2 {
+   text-align: center;
+    font-size: 40px;
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
