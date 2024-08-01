@@ -4,4 +4,21 @@
   padding: 50px;
   color: white;
   margin-top: 10px;
+  text-align: center;
+}
+.footer-wrapper h2 {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+.footer-wrapper a img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0px 15px 0px 0px;
+  background-color: white;
+}
+.footer-wrapper .rights {
+  border-top: 1px solid white;
+  margin-top: 30px;
+  padding-top: 20px;
 }/*# sourceMappingURL=Footer.css.map */

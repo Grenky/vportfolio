@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './styles/SlickSlider.css';
+import { Element } from "react-scroll";
 
 import image1 from './img/DJI_0286-HDR-Pano 16x9.jpg';
 import image2 from './img/DJI_0515-HDR-Pano 16х9.jpg';
@@ -26,7 +27,7 @@ const SlickSlider = () => {
     };
 
     return (
-        <div>
+        <Element name='top'>
         <Slider {...settings}>
           <div className='first-sld'>
             <img src={image1} alt='first-sld'/>
@@ -50,7 +51,7 @@ const SlickSlider = () => {
             <img src={image7} alt='first-sld'/>
           </div>
         </Slider>
-      </div>
+      </Element>
     );
 };
 

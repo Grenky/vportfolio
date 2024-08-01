@@ -2,6 +2,8 @@ import React  from "react"
 import './styles/Nature.css';
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry';
 import { Element } from "react-scroll";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import images from '../../assets/natures.json';
 
 
@@ -19,7 +21,12 @@ export default function Nature({ openModal }) {
                             
                                     {images.map((image) => ( 
                                         <div className="image-container" key={image.id}  onClick={() => openModal(image)}>
-                                            <img src={image.src} alt={`natureImg-${image.id}`}/>
+                                            <LazyLoadImage 
+                                                src={image.src} 
+                                                alt={`natureImg-${image.id}`}
+                                                effect="blur"
+                                                
+                                            />
                                         </div>  
                                     ))}
                         </Masonry>
