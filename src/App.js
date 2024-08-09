@@ -10,6 +10,7 @@ import People from './frontpage/People/People';
 import Symbols from './frontpage/Symbols/Symbols';
 
 
+
 Modal.setAppElement('#root');
 
 function App() {
@@ -26,8 +27,10 @@ function App() {
 
   const closeModal = () => {
       setIsOpen(false);
-      setSelectedImage(null);
-  }
+      setTimeout(() =>  {
+        setSelectedImage(null);
+      }, 300)
+  };
 
 
   useEffect(() => {
@@ -54,14 +57,28 @@ function App() {
       <Symbols openModal={openModal}/>
       <Footer />
 
-      <Modal
-                    isOpen={isOpen}
-                    onRequestClose={closeModal}
-                    contentLabel="Selected Image"
-                    className="modal"
-                    overlayClassName="overlay"
-                >
-                    {selectedImage && <img src={selectedImage.src}  alt={`natureImg-${setSelectedImage.id}`}  className="modal-image"/>}
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          contentLabel="Selected Image"
+          className={{
+              base: 'modal',
+              afterOpen: 'modal-open',
+              beforeClose: 'modal-close'
+            }}
+          overlayClassName={{
+              base: 'overlay',
+              afterOpen: 'overlay-open',
+              beforeClose: 'overlay-close'
+            }}
+            closeTimeoutMS={300}
+        >
+                    {selectedImage && 
+                    <img 
+                        src={selectedImage.src}  
+                        alt={`natureImg-${setSelectedImage.id}`}  
+                        className="modal-image"
+                    />}
                     <button onClick={closeModal} className="close-button">Close</button>
                 </Modal>
     </div>

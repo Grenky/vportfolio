@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import './styles/SlickSlider.css';
 import { Element } from "react-scroll";
 
-import image1 from './img/DJI_0286-HDR-Pano 16x9.jpg';
-import image2 from './img/DJI_0515-HDR-Pano 16х9.jpg';
-import image3 from './img/DJI_0795-HDR-Pano.jpg';
-import image4 from './img/DSC_1468 16x9.jpg';
-import image5 from './img/DSC_1613 16x9.jpg';
-import image6 from './img/DSC_6935 ed sRGB_ 16x9.jpg';
-import image7 from './img/DSC_9766_2 16x9.jpg';
+import image1 from './img/DJI_0286-HDR-Pano 16x9.small.jpg';
+import image2 from './img/DJI_0515-HDR-Pano 16х9.small.jpg';
+import image3 from './img/DJI_0795-HDR-Pano.small.jpg';
+import image4 from './img/DSC_1468 16x9.small.jpg';
+import image5 from './img/DSC_1613.16x9.small.jpg';
+import image6 from './img/DSC_6935 ed sRGB.16x9.small.jpg';
+import image7 from './img/DSC_5823.jpg';
 
 
 const SlickSlider = () => {

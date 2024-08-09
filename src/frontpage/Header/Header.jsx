@@ -26,7 +26,7 @@ export default function Header() {
 
     return(
         <header className="header" id="top">
-        <h1>Vitalii Petrushenko</h1>
+        <h1><Link to="top" smooth={true} duration={500}>Vitalii Petrushenko</Link></h1>
         <nav className="desktop-nav">
             <ul>
                 <li><Link to="top" smooth={true} duration={500}>Home</Link></li>
