@@ -9,4 +9,9 @@
         right: 0px;
         display: none!important;
     }
+    @media (max-width: 702px) {
+        img {
+            height: 50vh;
+        }
+    }
 }

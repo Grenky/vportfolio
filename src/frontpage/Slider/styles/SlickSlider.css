@@ -5,4 +5,9 @@
 .slick-slider .slick-arrow {
   right: 0px;
   display: none !important;
+}
+@media (max-width: 702px) {
+  .slick-slider img {
+    height: 50vh;
+  }
 }/*# sourceMappingURL=SlickSlider.css.map */
