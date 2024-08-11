@@ -3,11 +3,13 @@ import './App.css';
 import SlickSlider from './frontpage/Slider/SlickSlider';
 // import NatureList from './assets/natures.json';
 import Modal from 'react-modal';
+import { Route, Routes } from 'react-router-dom';
 import FrontPage from './frontpage/FrontPage';
 import Nature from './frontpage/Nature/Nature';
 import Footer from './frontpage/Footer/Footer';
 import People from './frontpage/People/People';
 import Symbols from './frontpage/Symbols/Symbols';
+import VideoPage from './videopage/VideoPage';
 
 
 
@@ -49,39 +51,45 @@ function App() {
 
 
   return (
-    <div className="App">
-      <FrontPage />
-      <SlickSlider />
-      <Nature openModal={openModal} />
-      <People openModal={openModal}/>
-      <Symbols openModal={openModal}/>
-      <Footer />
-
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={closeModal}
-          contentLabel="Selected Image"
-          className={{
-              base: 'modal',
-              afterOpen: 'modal-open',
-              beforeClose: 'modal-close'
-            }}
-          overlayClassName={{
-              base: 'overlay',
-              afterOpen: 'overlay-open',
-              beforeClose: 'overlay-close'
-            }}
-            closeTimeoutMS={300}
-        >
-                    {selectedImage && 
-                    <img 
-                        src={selectedImage.src}  
-                        alt={`natureImg-${setSelectedImage.id}`}  
-                        className="modal-image"
-                    />}
-                    <button onClick={closeModal} className="close-button">Close</button>
-                </Modal>
-    </div>
+      <div className="App">
+        <Routes>
+            <Route path="/" element={
+              <>
+                <FrontPage />
+                <SlickSlider />
+                <Nature openModal={openModal} />
+                <People openModal={openModal}/>
+                <Symbols openModal={openModal}/>
+                <Footer />
+              </>
+            } />
+            <Route path="/video" element={<VideoPage />} /> {/* Добавьте маршрут для видео */}
+          </Routes>
+          <Modal
+            isOpen={isOpen}
+            onRequestClose={closeModal}
+            contentLabel="Selected Image"
+            className={{
+                base: 'modal',
+                afterOpen: 'modal-open',
+                beforeClose: 'modal-close'
+              }}
+            overlayClassName={{
+                base: 'overlay',
+                afterOpen: 'overlay-open',
+                beforeClose: 'overlay-close'
+              }}
+              closeTimeoutMS={300}
+          >
+                      {selectedImage && 
+                      <img 
+                          src={selectedImage.src}  
+                          alt={`natureImg-${setSelectedImage.id}`}  
+                          className="modal-image"
+                      />}
+                      <button onClick={closeModal} className="close-button">Close</button>
+                  </Modal>
+      </div>
   );
 }
 
