@@ -44,6 +44,9 @@
   font-size: 24px;
   cursor: pointer;
 }
+.menu-icon .menu-icon-white {
+  color: white;
+}
 
 .nav-overlay {
   position: fixed;

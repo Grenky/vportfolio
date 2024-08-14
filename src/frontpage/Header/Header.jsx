@@ -14,6 +14,7 @@ export default function Header() {
     }
 
     useEffect(() => {
+
         if (menuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -38,7 +39,7 @@ export default function Header() {
             </ul>
         </nav>
         <div className="menu-icon" onClick={toggleMenu}>
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            {menuOpen ? <FaTimes className="menu-icon-white"/> : <FaBars />}
         </div>
         {menuOpen && (
             <nav className={`nav-overlay ${menuOpen ? 'open' : ''}`}>
