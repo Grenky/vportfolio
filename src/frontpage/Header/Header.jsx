@@ -30,7 +30,7 @@ export default function Header() {
         <h1><ScrollLink  to="top" smooth={true} duration={500}>Vitalii Petrushenko</ScrollLink ></h1>
         <nav className="desktop-nav">
             <ul>
-                <li><ScrollLink  to="top" smooth={true} duration={500}>Home</ScrollLink ></li>
+                <li><Link  to="/">Home</Link ></li>
                 <li><ScrollLink  to="nature-section" smooth={true} duration={500}>Nature</ScrollLink ></li>
                 <li><ScrollLink  to="people-section" smooth={true} duration={500}>People</ScrollLink ></li>
                 <li><ScrollLink  to="symbols-section" smooth={true} duration={500}>Symbols / Different</ScrollLink ></li>
@@ -47,6 +47,7 @@ export default function Header() {
                     <li><ScrollLink  to="nature-section" smooth={true} duration={500} onClick={toggleMenu}>Nature</ScrollLink ></li>
                     <li><ScrollLink  to="people-section" smooth={true} duration={500} onClick={toggleMenu}>People</ScrollLink ></li>
                     <li><ScrollLink  to="symbols-section" smooth={true} duration={500} onClick={toggleMenu}>Symbols / Different</ScrollLink ></li>
+                    <li><Link to="/video">Video</Link></li>
                 </ul>
             </nav>
         )}
